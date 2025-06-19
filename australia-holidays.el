@@ -1,10 +1,11 @@
-;;; australia-holidays.el --- Australian holidays for Emacs calendar. -*- lexical-binding: t -*-
+;;; australia-holidays.el --- Australian holidays for calendar -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2025 JM Ibañez
 
 ;; Author: JM Ibañez <jm@jmibanez.com>
 ;; URL: https://github.com/jmibanez/australia-holidays.el
 ;; Version: 1.0.0
+;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: calendar
 
 ;; This file is free software; you can redistribute it and/or modify
@@ -25,14 +26,14 @@
 ;; Replace holidays with holidays valid across all Australian states
 ;; and territories; e.g.:
 ;;
-;; (setq calendar-holidays holiday-australia-holidays)
+;; (setq calendar-holidays australia-holidays)
 ;;
 ;; Or append holidays:
 ;;
-;; (setq calendar-holidays (append calendar-holidays holiday-australia-holidays))
+;; (setq calendar-holidays (append calendar-holidays australia-holidays))
 ;;
 ;; You can also use a more specific list tailored to your state; e.g.
-;; for New South Wales use holiday-australia-nsw-holidays.
+;; for New South Wales use australia-holidays-for-nsw.
 ;;
 ;;; Code:
 
@@ -41,15 +42,15 @@
   (require 'holidays))
 
 ;;;###autoload
-(defcustom holiday-australia-january-26-label "Australia Day"
+(defcustom australia-holidays-january-26-label "Australia Day"
   "What to call the holiday celebrated on January 26."
   :type 'string
   :group 'calendar)
 
 ;;;###autoload
-(defvar holiday-australia-holidays
+(defvar australia-holidays
   '((holiday-fixed 1 1 "New Year")
-    (holiday-fixed 1 26 holiday-australia-january-26-label)
+    (holiday-fixed 1 26 australia-holidays-january-26-label)
     (holiday-easter-etc -2 "Good Friday")
     (holiday-easter-etc 0 "Easter Sunday")
     (holiday-easter-etc 1 "Easter Monday")
@@ -60,9 +61,9 @@
 and territories.")
 
 ;;;###autoload
-(defvar holiday-australia-act-holidays
+(defvar australia-holidays-for-act
   '((holiday-fixed 1 1 "New Year")
-    (holiday-fixed 1 26 holiday-australia-january-26-label)
+    (holiday-fixed 1 26 australia-holidays-january-26-label)
     (holiday-float 3 1 2 "Canberra Day")
     (holiday-easter-etc -2 "Good Friday")
     (holiday-easter-etc -1 "Easter Saturday")
@@ -77,9 +78,9 @@ and territories.")
   "Holidays in the Australian Capital Territory.")
 
 ;;;###autoload
-(defvar holiday-australia-nsw-holidays
+(defvar australia-holidays-for-nsw
   '((holiday-fixed 1 1 "New Year")
-    (holiday-fixed 1 26 holiday-australia-january-26-label)
+    (holiday-fixed 1 26 australia-holidays-january-26-label)
     (holiday-easter-etc -2 "Good Friday")
     (holiday-easter-etc -1 "Easter Saturday")
     (holiday-easter-etc 0 "Easter Sunday")
@@ -92,9 +93,9 @@ and territories.")
   "Holidays in New South Wales.")
 
 ;;;###autoload
-(defvar holiday-australia-nt-holidays
+(defvar australia-holidays-for-nt
   '((holiday-fixed 1 1 "New Year")
-    (holiday-fixed 1 26 holiday-australia-january-26-label)
+    (holiday-fixed 1 26 australia-holidays-january-26-label)
     (holiday-easter-etc -2 "Good Friday")
     (holiday-easter-etc -1 "Easter Saturday")
     (holiday-easter-etc 0 "Easter Sunday")
@@ -110,9 +111,9 @@ and territories.")
   "Holidays in the Northern Territory.")
 
 ;;;###autoload
-(defvar holiday-australia-qld-holidays
+(defvar australia-holidays-for-qld
   '((holiday-fixed 1 1 "New Year")
-    (holiday-fixed 1 26 holiday-australia-january-26-label)
+    (holiday-fixed 1 26 australia-holidays-january-26-label)
     (holiday-easter-etc -2 "Good Friday")
     (holiday-easter-etc -1 "The Day After Good Friday")
     (holiday-easter-etc 0 "Easter Sunday")
@@ -127,9 +128,9 @@ and territories.")
   "Holidays in Queensland.")
 
 ;;;###autoload
-(defvar holiday-australia-sa-holidays
+(defvar australia-holidays-for-sa
   '((holiday-fixed 1 1 "New Year")
-    (holiday-fixed 1 26 holiday-australia-january-26-label)
+    (holiday-fixed 1 26 australia-holidays-january-26-label)
     (holiday-float 3 1 2 "Adelaide Cup Day")
     (holiday-easter-etc -2 "Good Friday")
     (holiday-easter-etc -1 "Easter Saturday")
@@ -145,9 +146,9 @@ and territories.")
   "Holidays in South Australia.")
 
 ;;;###autoload
-(defvar holiday-australia-tas-holidays
+(defvar australia-holidays-for-tas
   '((holiday-fixed 1 1 "New Year")
-    (holiday-fixed 1 26 holiday-australia-january-26-label)
+    (holiday-fixed 1 26 australia-holidays-january-26-label)
     (holiday-float 2 1 2 "Royal Hobart Regatta")
     (holiday-float 3 1 2 "Eight Hours Day")
     (holiday-easter-etc -2 "Good Friday")
@@ -161,9 +162,9 @@ and territories.")
   "Holidays in Tasmania.")
 
 ;;;###autoload
-(defvar holiday-australia-vic-holidays
+(defvar australia-holidays-for-vic
   '((holiday-fixed 1 1 "New Year")
-    (holiday-fixed 1 26 holiday-australia-january-26-label)
+    (holiday-fixed 1 26 australia-holidays-january-26-label)
     (holiday-float 3 1 2 "Labour Day")
     (holiday-easter-etc -2 "Good Friday")
     (holiday-easter-etc -1 "Saturday Before Easter Sunday")
@@ -177,9 +178,9 @@ and territories.")
   "Holidays in Victoria.")
 
 ;;;###autoload
-(defvar holiday-australia-wa-holidays
+(defvar australia-holidays-for-wa
   '((holiday-fixed 1 1 "New Year")
-    (holiday-fixed 1 26 holiday-australia-january-26-label)
+    (holiday-fixed 1 26 australia-holidays-january-26-label)
     (holiday-float 3 1 1 "Labour Day")
     (holiday-easter-etc -2 "Good Friday")
     (holiday-easter-etc 0 "Easter Sunday")
