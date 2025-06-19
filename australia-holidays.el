@@ -62,9 +62,8 @@
     (holiday-easter-etc 1 "Easter Monday")
     (holiday-fixed 4 25 "ANZAC Day")
     (holiday-fixed 12 25 "Christmas Day"))
-  "Australian holidays. Only provides holidays that are valid in all states
-and territories.")
-
+  "Australian holidays.
+Only provides holidays that are valid in all states and territories.")
 ;;;###autoload
 (defvar australia-holidays-for-act
   '(australia-holidays
