@@ -64,6 +64,7 @@
     (holiday-fixed 12 25 "Christmas Day"))
   "Australian holidays.
 Only provides holidays that are valid in all states and territories.")
+
 ;;;###autoload
 (defvar australia-holidays-for-act
   '(australia-holidays
@@ -78,82 +79,82 @@ Only provides holidays that are valid in all states and territories.")
 
 ;;;###autoload
 (defvar australia-holidays-for-nsw
-  '(australia-holidays
-    (holiday-easter-etc -1 "Easter Saturday")
-    (holiday-easter-etc 0 "Easter Sunday")
-    (holiday-fixed 4 25 "ANZAC Day")
-    (holiday-float 6 1 2 "King's Birthday")
-    (holiday-float 10 1 1 "Labour Day")
-    (holiday-fixed 12 26 "Boxing Day"))
+  (append australia-holidays
+          '((holiday-easter-etc -1 "Easter Saturday")
+            (holiday-easter-etc 0 "Easter Sunday")
+            (holiday-fixed 4 25 "ANZAC Day")
+            (holiday-float 6 1 2 "King's Birthday")
+            (holiday-float 10 1 1 "Labour Day")
+            (holiday-fixed 12 26 "Boxing Day")))
   "Holidays in New South Wales.")
 
 ;;;###autoload
 (defvar australia-holidays-for-nt
-  '(australia-holidays
-    (holiday-easter-etc -1 "Easter Saturday")
-    (holiday-easter-etc 0 "Easter Sunday")
-    (holiday-float 5 1 1 "May Day")
-    (holiday-float 6 1 2 "King's Birthday")
-    (holiday-float 8 1 1 "Picnic Day")
-    (holiday-fixed 12 24 "Christmas Eve")
-    (holiday-fixed 12 26 "Boxing Day")
-    (holiday-fixed 12 31 "New Year's Eve"))
+  (append australia-holidays
+          '((holiday-easter-etc -1 "Easter Saturday")
+            (holiday-easter-etc 0 "Easter Sunday")
+            (holiday-float 5 1 1 "May Day")
+            (holiday-float 6 1 2 "King's Birthday")
+            (holiday-float 8 1 1 "Picnic Day")
+            (holiday-fixed 12 24 "Christmas Eve")
+            (holiday-fixed 12 26 "Boxing Day")
+            (holiday-fixed 12 31 "New Year's Eve")))
   "Holidays in the Northern Territory.")
 
 ;;;###autoload
 (defvar australia-holidays-for-qld
-  '(australia-holidays
-    (holiday-easter-etc -1 "The Day After Good Friday")
-    (holiday-easter-etc 0 "Easter Sunday")
-    (holiday-float 5 1 1 "Labour Day")
-    (holiday-float 8 3 1 "Royal Queensland Show" 9)
-    (holiday-float 10 1 1 "King's Birthday")
-    (holiday-fixed 12 24 "Christmas Eve")
-    (holiday-fixed 12 26 "Boxing Day"))
+  (append australia-holidays
+          '((holiday-easter-etc -1 "The Day After Good Friday")
+            (holiday-easter-etc 0 "Easter Sunday")
+            (holiday-float 5 1 1 "Labour Day")
+            (holiday-float 8 3 1 "Royal Queensland Show" 9)
+            (holiday-float 10 1 1 "King's Birthday")
+            (holiday-fixed 12 24 "Christmas Eve")
+            (holiday-fixed 12 26 "Boxing Day")))
   "Holidays in Queensland.")
 
 ;;;###autoload
 (defvar australia-holidays-for-sa
-  '(australia-holidays
-    (holiday-float 3 1 2 "Adelaide Cup Day")
-    (holiday-easter-etc -1 "Easter Saturday")
-    (holiday-easter-etc 0 "Easter Sunday")
-    (holiday-float 6 1 2 "King's Birthday")
-    (holiday-float 10 1 1 "Labour Day")
-    (holiday-fixed 12 24 "Christmas Eve")
-    (holiday-fixed 12 26 "Proclamation Day")
-    (holiday-fixed 12 31 "New Year's Eve"))
+  (append australia-holidays
+          '((holiday-float 3 1 2 "Adelaide Cup Day")
+            (holiday-easter-etc -1 "Easter Saturday")
+            (holiday-easter-etc 0 "Easter Sunday")
+            (holiday-float 6 1 2 "King's Birthday")
+            (holiday-float 10 1 1 "Labour Day")
+            (holiday-fixed 12 24 "Christmas Eve")
+            (holiday-fixed 12 26 "Proclamation Day")
+            (holiday-fixed 12 31 "New Year's Eve")))
   "Holidays in South Australia.")
 
 ;;;###autoload
 (defvar australia-holidays-for-tas
-  '(australia-holidays
-    (holiday-float 2 1 2 "Royal Hobart Regatta")
-    (holiday-float 3 1 2 "Eight Hours Day")
-    (holiday-easter-etc 2 "Easter Tuesday")
-    (holiday-float 6 1 2 "King's Birthday")
-    (holiday-float 11 1 1 "Recreation Day")
-    (holiday-fixed 12 26 "Boxing Day"))
+  (append australia-holidays
+          '((holiday-float 2 1 2 "Royal Hobart Regatta")
+            (holiday-float 3 1 2 "Eight Hours Day")
+            (holiday-easter-etc 2 "Easter Tuesday")
+            (holiday-float 6 1 2 "King's Birthday")
+            (holiday-float 11 1 1 "Recreation Day")
+            (holiday-fixed 12 26 "Boxing Day")))
   "Holidays in Tasmania.")
 
 ;;;###autoload
 (defvar australia-holidays-for-vic
-  '(australia-holidays
-    (holiday-float 3 1 2 "Labour Day")
-    (holiday-easter-etc -1 "Saturday Before Easter Sunday")
-    (holiday-easter-etc 0 "Easter Sunday")
-    (holiday-float 6 1 2 "King's Birthday")
-    (holiday-float 11 2 1 "Melbourne Cup")
-    (holiday-fixed 12 26 "Boxing Day"))
+  (append australia-holidays
+          '((holiday-float 3 1 2 "Labour Day")
+            (holiday-easter-etc -1 "Saturday Before Easter Sunday")
+            (holiday-easter-etc 0 "Easter Sunday")
+            (holiday-float 6 1 2 "King's Birthday")
+            (holiday-float 11 2 1 "Melbourne Cup")
+            (holiday-fixed 12 26 "Boxing Day")))
   "Holidays in Victoria.")
 
 ;;;###autoload
 (defvar australia-holidays-for-wa
-  '(australia-holidays
-    (holiday-float 3 1 1 "Labour Day")
-    (holiday-easter-etc 0 "Easter Sunday")
-    (holiday-float 6 1 1 "Western Australia Day")
-    (holiday-fixed 12 26 "Boxing Day"))
+  (append australia-holidays
+          '((holiday-float 3 1 1 "Labour Day")
+            (holiday-easter-etc 0 "Easter Sunday")
+            (holiday-float 6 1 1 "Western Australia Day")
+            (holiday-fixed 12 26 "Boxing Day")))
   "Holidays in Western Australia.")
 
 (provide 'australia-holidays)
