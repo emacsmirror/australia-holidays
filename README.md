@@ -1,5 +1,7 @@
 # australia-holidays.el
 
+[![MELPA](https://melpa.org/packages/australia-holidays-badge.svg)](https://melpa.org/#/australia-holidays)
+
 A list of public holidays in Australia, as well as for each specific Australian state or territory. To use this instead of the US-centric holiday list:
 
 ```
