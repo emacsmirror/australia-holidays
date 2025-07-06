@@ -145,6 +145,9 @@ Only provides holidays that are valid in all states and territories.")
             (holiday-easter-etc 0 "Easter Sunday")
             (holiday-float 6 1 2 "King's Birthday")
             (holiday-float 11 2 1 "Melbourne Cup")
+            (holiday-float 9 5 -1
+                           "Friday before AFL Grand Final"
+                           29)
             (holiday-fixed 12 26 "Boxing Day")))
   "Holidays in Victoria.")
 
